@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PlacesService } from '../../services/places.service';
 
 @Component({
   selector: 'app-map-screen',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./map-screen.component.css']
 })
 export class MapScreenComponent {
+
+  constructor(private placesService: PlacesService){}
+
+  get isUserLocationReady() {
+    return this.placesService.isUserLocationReady;
+  }
 
 }
