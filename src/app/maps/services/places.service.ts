@@ -64,4 +64,9 @@ export class PlacesService {
       this.mapService.createMarkersFormPlaces(this.places, this.useLocation);
      });
   }
+
+  deletePlaces() {
+    this.places = [];
+  }
+
 }
